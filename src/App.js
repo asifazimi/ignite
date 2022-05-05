@@ -1,7 +1,7 @@
 function App() {
   return (
     <div>
-      <h1>Ignit</h1>
+      <h1>Ignit Project</h1>
     </div>
   );
 }
