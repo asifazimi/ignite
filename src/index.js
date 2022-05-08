@@ -3,16 +3,16 @@ import ReactDOM from "react-dom/client";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 // Redux Setup
-import { createStore } from "redux";
+import { createStore, applyMiddleware, compose } from "redux";
 import { Provider } from "react-redux";
-// Reducers
+import thunk from "redux-thunk";
+// Reducer
 import rootReducer from "./reducers";
 
+const composeEnhaner = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
+
 // Stores states
-const store = createStore(
-  rootReducer,
-  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
-);
+const store = createStore(rootReducer, composeEnhaner(applyMiddleware(thunk)));
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
