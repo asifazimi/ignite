@@ -19,7 +19,7 @@ function Home() {
 
   return (
     <GameList>
-      <h1>Upcoming Games</h1>
+      <h2>Upcoming Games</h2>
       <Games>
         {upcoming.map((game) => (
           <Game
@@ -35,8 +35,20 @@ function Home() {
   );
 }
 
-const GameList = styled(motion.div)``;
+const GameList = styled(motion.div)`
+  padding: 0 5rem;
 
-const Games = styled(motion.div)``;
+  h2 {
+    padding: 5rem 0rem;
+  }
+`;
+
+const Games = styled(motion.div)`
+  min-height: 80vh;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+  grid-column-gap: 3rem;
+  grid-row-gap: 5rem;
+`;
 
 export default Home;
