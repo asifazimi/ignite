@@ -31,20 +31,36 @@ function Home() {
           />
         ))}
       </Games>
+      <h2>Popular Games</h2>
+      <Games>
+        {popular.map((game) => (
+          <Game
+            name={game.name}
+            released={game.released}
+            id={game.id}
+            image={game.background_image}
+            key={game.key}
+          />
+        ))}
+      </Games>
+      <h2>New Games</h2>
+      <Games>
+        {newGames.map((game) => (
+          <Game
+            name={game.name}
+            released={game.released}
+            id={game.id}
+            image={game.background_image}
+            key={game.key}
+          />
+        ))}
+      </Games>
     </GameList>
   );
 }
 
 const GameList = styled(motion.div)`
-  margin: 0 1rem;
-
-  h2 {
-    padding: 2rem 0rem;
-  }
-
-  * {
-    font-family: sans-serif;
-  }
+  margin: 0 2.5rem;
 `;
 
 const Games = styled(motion.div)`
@@ -53,6 +69,7 @@ const Games = styled(motion.div)`
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   column-gap: 1.5rem;
   row-gap: 3rem;
+  margin-bottom: 1rem;
 `;
 
 export default Home;
