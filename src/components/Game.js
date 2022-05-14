@@ -20,8 +20,6 @@ const StyledGame = styled(motion.div)`
   border-radius: 0.8rem;
   overflow: hidden;
 
-
-
   img {
     width: 100%;
     height: 100%;
