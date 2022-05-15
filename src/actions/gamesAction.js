@@ -10,6 +10,7 @@ export const loadGames = () => async (dispatch) => {
   const upcomingData = await axios.get(upcomingGamesURL());
   const newData = await axios.get(newGamesURL());
 
+  // Send it back to reducers
   dispatch({
     type: "FETCH_GAMES",
     payload: {

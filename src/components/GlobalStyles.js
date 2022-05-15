@@ -30,13 +30,20 @@ const GlobalStyles = createGlobalStyle`
  }
 
  h4 {
-    padding: 1rem 0.5rem;
+    padding:  1rem;
     color: #333;
+    font-size: 1.1em;
+    line-height: 150%;
   }
   
   p {
     font-size: 1em;
     line-height: 200%;
+    color: #696969;
+  }
+
+  a {
+    text-decoration: none;
     color: #696969;
   }
 
