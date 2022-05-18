@@ -9,5 +9,5 @@ export const loadDetail = (id) => async (dispatch) => {
     payload: {
       game: detailData.data,
     },
-  }); 
+  });
 };
