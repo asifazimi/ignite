@@ -13,8 +13,12 @@ const GlobalStyles = createGlobalStyle`
      }
 
      &::-webkit-scrollbar-thumb {
-         background-color: darkgray;
+         background-color: darkgrey;
      }
+
+     &::-webkit-scrollbar-track {
+    background-color: white;
+  }
  }
 
  body {
