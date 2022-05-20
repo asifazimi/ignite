@@ -51,6 +51,7 @@ const GlobalStyles = createGlobalStyle`
     color: #696969;
   }
 
+
 `;
 
 export default GlobalStyles;
