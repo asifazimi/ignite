@@ -2,6 +2,7 @@ import React from "react";
 // Styling & Animations
 import styled from "styled-components";
 import { motion } from "framer-motion";
+import { smallImage } from "../util";
 // Redux
 import { useSelector } from "react-redux";
 import { useNavigate } from "react-router";
@@ -42,14 +43,21 @@ const GameDetail = () => {
             </Stats>
 
             <Media>
-              <img src={game.background_image} alt={game.background_image} />
+              <img
+                src={smallImage(game.background_image, 640)}
+                alt={game.background_image}
+              />
             </Media>
             <Description>
               <p>{game.description_raw}</p>
             </Description>
             <div className="gallary">
               {screen.results.map((screen) => (
-                <img src={screen.image} alt={screen.image} key={screen.id} />
+                <img
+                  src={smallImage(screen.image, 640)}
+                  alt={screen.image}
+                  key={screen.id}
+                />
               ))}
             </div>
           </Detail>
