@@ -8,8 +8,9 @@ import { smallImage } from "../util";
 // Router
 import { Link } from "react-router-dom";
 
-const Game = ({ name, released, id, image, key }) => {
+const Game = ({ name, released, id, image }) => {
   const dispatch = useDispatch();
+  const stringPathId = id.toString();
 
   // Load Detail Handler
   const loadDetailHandler = () => {
@@ -18,11 +19,15 @@ const Game = ({ name, released, id, image, key }) => {
   };
 
   return (
-    <StyledGame onClick={loadDetailHandler}>
+    <StyledGame layoutId={stringPathId} onClick={loadDetailHandler}>
       <Link to={`/game/${id}`}>
         <h4>{name}</h4>
         <p>{released}</p>
-        <img src={smallImage(image, 640)} alt={name} />
+        <motion.img
+          layoutId={`image ${stringPathId}`}
+          src={smallImage(image, 640)}
+          alt={name}
+        />
       </Link>
     </StyledGame>
   );
