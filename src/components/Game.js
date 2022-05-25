@@ -8,7 +8,7 @@ import { smallImage } from "../util";
 // Router
 import { Link } from "react-router-dom";
 
-const Game = ({ name, released, id, image }) => {
+const Game = ({ name, released, id, image, key }) => {
   const dispatch = useDispatch();
   const stringPathId = id.toString();
 

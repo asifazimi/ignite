@@ -33,6 +33,10 @@ const GlobalStyles = createGlobalStyle`
     font-size: 1.7em;
  }
 
+ h3 {
+   font-size: 1em;
+ }
+
  h4 {
     padding:  1rem;
     color: #333;
