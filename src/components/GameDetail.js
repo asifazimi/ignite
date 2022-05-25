@@ -13,6 +13,9 @@ import nintendo from "../img/nintendo.svg";
 import playstation from "../img/playstation.svg";
 import steam from "../img/steam.svg";
 import xbox from "../img/xbox.svg";
+// Stars
+import starempty from "../img/star-empty.png";
+import starfull from "../img/star-full.png";
 
 const GameDetail = ({ pathId }) => {
   const navigate = useNavigate();
@@ -35,6 +38,20 @@ const GameDetail = ({ pathId }) => {
     }
   };
 
+  // Get Stars
+  const getStars = () => {
+    const stars = [];
+    const rating = Math.floor(game.rating);
+    for (let i = 1; i <= 5; i++) {
+      if (i <= rating) {
+        stars.push(<img src={starfull} key={i} alt="star"></img>);
+      } else {
+        stars.push(<img src={starempty} key={i} alt="star"></img>);
+      }
+    }
+    return stars;
+  };
+
   // Exit Detail
   const exitDetailHandler = (e) => {
     const element = e.target;
@@ -55,7 +72,7 @@ const GameDetail = ({ pathId }) => {
             <Stats>
               <div className="rating">
                 <motion.h3 layoutId={`title ${pathId}`}>{game.name}</motion.h3>
-                <p>Rating: {game.rating}</p>
+                <p>Rating: {game.rating} </p> {getStars()}
               </div>
               <Info>
                 <h3>Platforms</h3>
@@ -137,6 +154,12 @@ const Stats = styled(motion.div)`
   align-items: center;
   justify-content: space-between;
   line-height: 200%;
+
+  img {
+    display: inline;
+    width: 1rem;
+    height: 1rem;
+  }
 `;
 
 const Info = styled(motion.div)`
@@ -146,9 +169,11 @@ const Info = styled(motion.div)`
 const Platforms = styled(motion.div)`
   display: flex;
   justify-content: space-evenly;
+  margin-top: 0.3rem;
 
   img {
-    width: 25px;
+    width: 1rem;
+    height: 1rem;
     margin-left: 3rem;
   }
 `;
