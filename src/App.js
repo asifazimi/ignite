@@ -3,7 +3,8 @@ import React from "react";
 import Home from "./pages/Home";
 // Components
 import GlobalStyles from "./components/GlobalStyles";
-// Router
+import Nav from "./components/Nav";
+// Routes
 import { Route, Routes, useLocation } from "react-router-dom";
 
 function App() {
@@ -12,6 +13,7 @@ function App() {
   return (
     <div>
       <GlobalStyles />
+      <Nav />
       <Routes>
         <Route path="/game/:id" element={<Home />} />
         <Route path="/" element={<Home />} />

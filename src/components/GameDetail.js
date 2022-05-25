@@ -172,8 +172,8 @@ const Platforms = styled(motion.div)`
   margin-top: 0.3rem;
 
   img {
-    width: 1rem;
-    height: 1rem;
+    width: 1.5rem;
+    height: 1.5rem;
     margin-left: 3rem;
   }
 `;
