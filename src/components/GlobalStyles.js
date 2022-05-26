@@ -27,7 +27,7 @@ const GlobalStyles = createGlobalStyle`
  }
 
  h2 {
-    padding: 3rem 0rem;
+    padding: 2rem 0rem;
     font-family: 'Roboto', sans-serif;
     color: #333;
     font-size: 1.7em;

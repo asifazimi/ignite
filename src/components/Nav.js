@@ -24,20 +24,23 @@ const StyledNav = styled(motion.div)`
 
   input {
     width: 30%;
-    font-size: 1.5em;
+    font-size: 1.3em;
     padding: 0.3rem;
     border: none;
     box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
     margin-top: 1rem;
+    border-radius: 0.2rem;
   }
 
   button {
-    font-size: 1.5em;
+    font-size: 1.3em;
     border: none;
     padding: 0.3rem 1rem;
     cursor: pointer;
     background-color: #ff7676;
     color: #fff;
+    border-top-right-radius: 0.2rem;
+    border-bottom-right-radius: 0.2rem;
   }
 `;
 
