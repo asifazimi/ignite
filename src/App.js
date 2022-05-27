@@ -5,11 +5,9 @@ import Home from "./pages/Home";
 import GlobalStyles from "./components/GlobalStyles";
 import Nav from "./components/Nav";
 // Routes
-import { Route, Routes, useLocation } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 
 function App() {
-  const location = useLocation();
-
   return (
     <div>
       <GlobalStyles />
