@@ -10,6 +10,8 @@ import Game from "../components/Game";
 import GameDetail from "../components/GameDetail";
 // Router
 import { useLocation } from "react-router-dom";
+// Animations
+import { fadeIn } from "../animation";
 
 function Home() {
   // get the current location
@@ -27,7 +29,7 @@ function Home() {
   );
 
   return (
-    <GameList>
+    <GameList variants={fadeIn} initial="hidden" animate="show">
       <AnimateSharedLayout type="crossfade">
         <AnimatePresence>
           {pathId && <GameDetail pathId={pathId} />}
