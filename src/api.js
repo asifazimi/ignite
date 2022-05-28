@@ -1,5 +1,5 @@
 // Base URL
-const api_key = "?key=37a6694facd1409788744501a4b4ec0b";
+const api_key = `?key=${process.env.REACT_APP_IGNIT_API}`;
 const base_url = `https://api.rawg.io/api/games`;
 
 //   Getting the date
@@ -48,4 +48,4 @@ export const gameScreenShotURL = (game_id) =>
 
 // Searched game
 export const searchGameURL = (game_name) =>
-  `${base_url}?search=${game_name}&key=37a6694facd1409788744501a4b4ec0b&page_size=9`;
+  `${base_url}?search=${game_name}&key=${process.env.REACT_APP_IGNIT_API}&page_size=9`;
